@@ -1,0 +1,6 @@
+CREATE TABLE "Received Data" (
+	ID SERIAL PRIMARY KEY,
+	cpuserial VARCHAR NOT NULL,
+	timestamp INT NOT NULL,
+	"CO2 ppm" INT NOT NULL
+);
