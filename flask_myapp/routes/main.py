@@ -44,7 +44,7 @@ def search():
             return "ERROR getting Serial!"
         fet=db.execute(f"""
         SELECT timestamp,"CO2 ppm" FROM "Received Data" WHERE cpuserial='{cpuserial}'
-        """).fetchall()
+        ORDER BY timestamp;""").fetchall()
         csv="timestamp,CO2 ppm"
         for i in fet:
             csv=csv+"<br>"+str(i[0])+","+str(i[1])
